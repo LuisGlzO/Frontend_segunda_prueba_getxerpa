@@ -14,4 +14,8 @@ export class ApiService {
   public getData(): Observable<any>{
     return this.http.get<any>(this.urlApi+'categorias')
   }
+
+  public crearCategoria(nuevaCategoria: any): Observable<any> {
+    return this.http.post(this.urlApi + 'categorias', nuevaCategoria);
+  }
 }
